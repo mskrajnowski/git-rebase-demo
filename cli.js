@@ -10,8 +10,15 @@ cli.version(version)
 cli
   .command("ls [path]")
   .description("List files in a directory")
-  .action((path = process.cwd()) =>
-    fs.readdirSync(path).forEach(file => console.log(file))
-  )
+  .option("-a, --all", "List hidden files")
+  .action((path = process.cwd(), { all }) => {
+    let names = fs.readdirSync(path)
+
+    if (!all) {
+      names = names.filter(name => !name.startsWith("."))
+    }
+
+    names.forEach(name => console.log(name))
+  })
 
 cli.parse(process.argv)
