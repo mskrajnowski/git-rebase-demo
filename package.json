@@ -1,0 +1,23 @@
+{
+  "name": "git-rebase-demo",
+  "version": "1.0.0",
+  "description": "Simple repo for explaining how git rebase works",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mskrajnowski/git-rebase-demo.git"
+  },
+  "keywords": [
+    "git",
+    "rebase"
+  ],
+  "author": "Marek Skrajnowski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mskrajnowski/git-rebase-demo/issues"
+  },
+  "homepage": "https://github.com/mskrajnowski/git-rebase-demo#readme"
+}
