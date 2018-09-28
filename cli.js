@@ -5,6 +5,9 @@ const version = require("./package.json").version
 
 cli.version(version)
 
-cli.command("echo [args...]").action(args => console.log(args.join(" ")))
+cli
+  .command("echo [args...]")
+  .description("Prints arguments to stdout")
+  .action(args => console.log(args.join(" ")))
 
 cli.parse(process.argv)
